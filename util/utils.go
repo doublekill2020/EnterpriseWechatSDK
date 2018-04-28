@@ -12,9 +12,9 @@ import (
 )
 
 const (
-	token          = "nHI0Om49BUIAbflA0Ua"
-	encodingAESKey = "CThIcYlYpYi00ddz7N9snW6n2DPyo51S34E5w2IPEmX="
-	Corpid         = "wwb8520da7542392a9"
+	token          = ""//替换开发申请的
+	encodingAESKey = ""//替换开发申请的
+	Corpid         = ""//替换开发申请的
 )
 
 func VerifyURL(msgSignature, timeStamp, nonce, echoStr string) (string, AesException) {
