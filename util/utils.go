@@ -66,7 +66,8 @@ func decrypt(echoStr string) (string, AesException) {
 		//log.Error("base64 decrypt err:%v", err)
 		return "", DecodeBase64Error
 	}
-	decodingAESKey, err := base64.StdEncoding.DecodeString(encodingAESKey)
+	// see https://developer.work.weixin.qq.com/document/path/90968#%E6%A6%82%E8%BF%B0
+	decodingAESKey, err := base64.StdEncoding.DecodeString(encodingAESKey + "=")
 	if err != nil {
 		//log.Error("base64 decrypt err:%v", err)
 		return "", DecodeBase64Error
